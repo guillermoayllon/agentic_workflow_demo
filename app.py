@@ -84,5 +84,5 @@ chat_results = autogen.agentchat.initiate_chats(
 #     export_path="observability/speaker_transitions_dict.png",
 # )
 
-save_to_markdown(chat_results[-1].summary, "observability/final_document")
-save_dict_to_yaml(chat_results, "observability/chat_history.yml")
+save_to_markdown(chat_results[-1].summary, "tmp/final_document")
+save_dict_to_yaml(chat_results, "tmp/chat_history.yml")
