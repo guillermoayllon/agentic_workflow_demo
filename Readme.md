@@ -2,6 +2,10 @@
 
 This project aims to investigate multi-agent workflows using large language models (LLMs) for resolving complex tasks. For example, it involves creating detailed documents by leveraging information from the internet and databases.
 
+For this puprpose, we use Microsoft's AutoGen. AutoGen is an open-source programming framework for building AI agents and facilitating cooperation among multiple agents to solve tasks. AutoGen aims to provide an easy-to-use and flexible framework for accelerating development and research on agentic AI, like PyTorch for Deep Learning. It offers features such as agents that can converse with other agents, LLM and tool use support, autonomous and human-in-the-loop workflows, and multi-agent conversation patterns.
+
+* AutoGen's documentation: [https://microsoft.github.io/autogen/docs/Getting-Started/](https://microsoft.github.io/autogen/docs/Getting-Started/).
+
 ## Structure of the project
 
 - [modules/](./modules/)
@@ -41,6 +45,14 @@ If you want to use a different LLM:
 
     Whenever an agent needs to run code, it does so inside a Docker container. To achieve this, we prepare a Docker image with the most common Data Science libraries, and each time the agent requires code execution, it launches a new instance of that image. While it’s technically possible for agents to execute code directly on bare-metal, it’s not recommended because agents might independently install libraries or run bash scripts.
 
+    Run this command on the root folder of this project to build a Docker image from the Dockerfile:
+
     ```bash
     docker build -t autogen_execution_environment:latest .
+    ```
+
+4. Launch the app!
+
+    ```bash
+    python app.py
     ```
