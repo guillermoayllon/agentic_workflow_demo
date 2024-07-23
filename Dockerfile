@@ -31,11 +31,7 @@ RUN pip install --no-cache-dir \
 
 RUN pip install --upgrade pip setuptools
 
-# Set the working directory
+
 WORKDIR /app
 
-# Copy your Python code or data science scripts to the container
-# COPY my_script.py /app/
-
-# Set the default command to run when the container starts
 CMD ["python3"]
