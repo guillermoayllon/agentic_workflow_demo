@@ -9,19 +9,19 @@ For this puprpose, we use Microsoft's AutoGen. AutoGen is an open-source program
 ## Structure of the project
 
 - [modules/](./modules/)
-    - [agents.py](./modules/agents.py): Agents' definitions and configurations.
-    - [common_utils.py](./modules/common_utils.py): Useful functions.
-    - [configuration.py](./modules/configuration.py): Configuration dictionaries to connect with LLMs.
-    - [speaker_policy.py](./modules/speaker_policy.py): Definition of allowed agent transitions. It is not being used at the moment.
+    - [agents.py](./modules/agents.py): Contains definitions and configurations for agents.
+    - [common_utils.py](./modules/common_utils.py): Provides useful functions.
+    - [configuration.py](./modules/configuration.py): Holds configuration dictionaries for connecting with LLMs.
+    - [speaker_policy.py](./modules/speaker_policy.py): Defines allowed agent transitions, although it’s currently unused.
 
 - [tmp/](./tmp/)
-    - [chat_history.yml](./tmp/chat_history.yml): YAML file containing the agents' chat history. It is overwritten in every exeuction.
-    - [final_document.md](./tmp/final_document.md): Final output of the system. Producing a high-quality final markdown document from a simple user query is the whole goal of this demo.
+    - [chat_history.yml](./tmp/chat_history.yml): A YAML file that stores agents’ chat history. It gets overwritten with each execution.
+    - [final_document.md](./tmp/final_document.md): The system’s final output. The goal of this demo is to generate a high-quality markdown document from a simple user query. It gets overwritten with each execution.
 
-- [Dockerfile](./Dockerfile): Dockerfile to create the Docker image where the app runs LLM generated code.
+- [Dockerfile](./Dockerfile): Used to create the Docker image where the app runs LLM-generated code.
 
 - [coding/](./coding/): The Docker container executes code within this folder, resulting in any output (such as images, Python and Bash scripts, tables, etc.) being written to the same location.
-- [app.py](./app.py): Main script of the app.
+- [app.py](./app.py): The main script of the app.
 
 # How to run
 
